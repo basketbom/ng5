@@ -1,0 +1,21 @@
+<div class="container color-dark">
+  <div class="col">
+    <p>Add List</p>
+  </div>
+  <div class="col">
+    <p>Your List {{itemCount}}</p>
+  </div>
+</div>
+
+<div class="container color-light">
+  <div class="col">
+    <form name="Myform">
+      <input type="text" name="item" class="txt" placeholder="Add Your new list" [(ngModel)]="listText" >
+      <input type="submit" value="{{itemDisplay}}" class="btn" (click)="additem()">
+      <br>{{listText}}
+    </form>
+  </div>
+  <div class="col">
+    <p class="life-container" *ngFor="let varData of listall">{{varData}}</p>
+  </div>
+</div>
